@@ -520,14 +520,14 @@ selectAud(savedAud > -1 ? savedAud : 0, false);
    TEAM + BOARD
    ===================================================================== */
 const TEAM = [
-  { n: 'Casper Lippman', i: 'CL', r: 'Founder · Collegiate ’27', d: 'Recorded the original Latin audio and started DICTA. Leads development and releases.', c: 'var(--red-field)' },
-  { n: 'Avaan Chamadia', i: 'AC', r: 'Developer · Collegiate ’28', d: 'Built Sort into Piles, the Grammar reference and the Exercises engine.', c: 'var(--ltrg)' },
-  { n: 'Ryan Keum', i: 'RK', r: 'Regis ’28', d: 'Proposed the Diacritics Optional setting, which shipped in v1.11. Owns the website on the idea board.', c: 'var(--llps-field)' },
-  { n: 'Otto Gallipoli', i: 'OG', r: 'Collegiate ’27', d: 'Helped design this website.', c: '#5b4f8a' },
-  { n: 'Hannah Kantowitz', i: 'HK', r: 'Co-founder · Grace Church ’26', d: 'Built the first versions of DICTA with Casper in 2025.', c: '#2a2423' }
+  { n: 'Casper Lippman', i: 'CL', r: 'Founder · Collegiate ’27', c: 'var(--red-field)' },
+  { n: 'Avaan Chamadia', i: 'AC', r: 'Developer · Collegiate ’28', c: 'var(--ltrg)' },
+  { n: 'Ryan Keum', i: 'RK', r: 'Regis ’28', c: 'var(--llps-field)' },
+  { n: 'Otto Gallipoli', i: 'OG', r: 'Collegiate ’27', c: '#5b4f8a' },
+  { n: 'Hannah Kantowitz', i: 'HK', r: 'Co-founder · Grace Church ’26', c: '#2a2423' }
 ];
 $('#teamGrid').innerHTML = TEAM.map(m => `<div class="member"><span class="mono" style="--mc:${m.c}" aria-hidden="true">${m.i}</span>
-  <div><b>${m.n}</b><span class="role">${m.r}</span></div>${m.d ? `<p>${m.d}</p>` : '<p class="todo">Proposal: add Otto’s focus here.</p>'}</div>`).join('');
+  <div><b>${m.n}</b><span class="role">${m.r}</span></div></div>`).join('');
 
 const BOARD = [
   [1, 'Multiplayer competition mode', 'Casper', [6, 4, 2], 'done', 'Shipped · v1.10'],
