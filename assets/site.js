@@ -517,17 +517,8 @@ const savedAud = AUD.findIndex(a => a.id === store.get('dicta-aud'));
 selectAud(savedAud > -1 ? savedAud : 0, false);
 
 /* =====================================================================
-   TEAM + BOARD
+   BOARD (the team grid is plain HTML in index.html so search engines can read the names)
    ===================================================================== */
-const TEAM = [
-  { n: 'Casper Lippman', i: 'CL', r: 'Founder · Collegiate ’27', c: 'var(--red-field)' },
-  { n: 'Avaan Chamadia', i: 'AC', r: 'Developer · Collegiate ’28', c: 'var(--ltrg)' },
-  { n: 'Ryan Keum', i: 'RK', r: 'Regis ’28', c: 'var(--llps-field)' },
-  { n: 'Otto Gallipoli', i: 'OG', r: 'Collegiate ’27', c: '#5b4f8a' },
-  { n: 'Hannah Kantowitz', i: 'HK', r: 'Co-founder · Grace Church ’26', c: '#2a2423' }
-];
-$('#teamGrid').innerHTML = TEAM.map(m => `<div class="member"><span class="mono" style="--mc:${m.c}" aria-hidden="true">${m.i}</span>
-  <div><b>${m.n}</b><span class="role">${m.r}</span></div></div>`).join('');
 
 const BOARD = [
   [1, 'Multiplayer competition mode', 'Casper', [6, 4, 2], 'done', 'Shipped · v1.10'],
